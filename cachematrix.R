@@ -5,7 +5,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
   # i stores the cached inverse matrix
-  i <- NULL
+  i <- NULL 
   
   # Set for the matrix
   set <- function(y) {

@@ -1,0 +1,16 @@
+{
+    "contents" : "## Put comments here that give an overall description of what your\n## functions do\n\n## Write a short comment describing this function\n\nmakeCacheMatrix <- function(x = matrix()) {\n  # i stores the cached inverse matrix\n  i <- NULL \n  \n  # Set for the matrix\n  set <- function(y) {\n    x <<- y\n    i <<- NULL\n  }\n  # Get for the matrix\n  get <- function() x\n  # Set for the inverse\n  seti <- function(inverse) i <<- inverse\n  # Get for the inverse\n  geti <- function() i\n  \n  # Return the matrix\n  list(set = set, get = get, seti = seti, geti = geti)\n}\n\n\n## Write a short comment describing this function\n\ncacheSolve <- function(x, ...) {\n        ## Return a matrix that is the inverse of 'x'\n  \n  i <- x$geti()\n  # if inverse is calculated it will give it back\n  if(!is.null(i)) {\n    message(\"returning cached matrix\")\n    return(i)\n  }\n  # if inverse is not calculated then it calculates\n  d <- x$get()\n  i <- solve(data, ...)\n  # cache\n  x$seti(i)\n  # return\n  i\n}\n",
+    "created" : 1403477119569.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2016791368",
+    "id" : "7E973253",
+    "lastKnownWriteTime" : 1403477164,
+    "path" : "~/GitHub/datasciencecoursera/cachematrix.R",
+    "project_path" : "cachematrix.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
