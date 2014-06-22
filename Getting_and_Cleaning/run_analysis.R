@@ -16,6 +16,7 @@ Total <-  XTotal[, grep("-mean\\(\\)|-std\\(\\)", Feat[, 2])]
 
 # 3. Uses descriptive activity names to name the activities in the data set
 
+library(plyr)
 Total <- cbind(join(YTotal,ActivityLabel)$V2, Total)
 
 # 4. Appropriately labels the data set with descriptive variable names. 
